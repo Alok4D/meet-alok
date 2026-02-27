@@ -90,7 +90,7 @@ const HeroDemo = () => {
   const [isAnimationComplete, setIsAnimationComplete] = useState(false)
 
   const headingText = "Hi, I'm"
-  const nameText = "Muhammad Musa Khan."
+  const nameText = "Alok Roy."
   const subheadingText = "Building the future, one line of code at a time."
   const descriptionText =
     "Passionate about building secure and creative web solutions using modern technologies."
