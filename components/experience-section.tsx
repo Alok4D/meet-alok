@@ -1,0 +1,208 @@
+"use client"
+
+import { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { Squares } from "@/components/ui/squares-background"
+import { ChevronLeft, ChevronRight, Briefcase, GraduationCap, Award } from "lucide-react"
+
+export function ExperienceSection() {
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  const slides = [
+    {
+      title: "Experience",
+      icon: <Briefcase className="w-8 h-8" />,
+      items: [
+        {
+          title: "Full-Stack Developer",
+          company: "Rhombix Technologies Web Solutions (Remote)",
+          period: "2024 - 2025",
+          description:
+            "Developed full-stack web applications using React, Next.js, and Node.js. Focused on building scalable and high-performance interfaces while following best coding practices.",
+        },
+        {
+          title: "Frontend Developer",
+          company: "Client Project (Freelance)",
+          period: "2025",
+          description:
+            "Developed responsive web interfaces using React.js and Tailwind CSS. Contributed to multiple full-stack projects, including 'iNotebook' – a MERN Stack Notes App with JWT authentication and full CRUD functionality.",
+        },
+        {
+          title: "React & NextJS Developer ",
+          company: "Freelance",
+          period: "2023 - Present",
+          description:
+            "Worked on both frontend and backend development using React, NextJS, Node.js, and MongoDB. Built full-stack web applications and continue to work with clients as a freelance developer.",
+        },
+      ],
+    },
+    {
+      title: "Education",
+      icon: <GraduationCap className="w-8 h-8" />,
+      items: [
+        {
+          title: "Bachelor of Computer Science",
+          company: "University of Science Technology",
+          period: "2024 - Present",
+          description:
+            "Currently pursuing a Bachelor's degree in Computer Science with a focus on Software Engineering and Web Development. Actively working on full-stack projects and learning modern technologies.",
+        },
+        {
+          title: "Intermediate in Computer Science",
+          company: "Government College",
+          period: "2022 - 2024",
+          description:
+            "Studied computer fundamentals, programming basics, and mathematics. Built a strong foundation in logic building and problem-solving.",
+        },
+        {
+          title: "Online Courses & Bootcamps",
+          company: "Various Platforms",
+          period: "2019 - Present",
+          description:
+            "Completed multiple online courses in React, Node.js, and modern web development from platforms like Udemy, Coursera, and YouTube.",
+        },
+      ],
+    },
+    {
+      title: "Certificates",
+      icon: <Award className="w-8 h-8" />,
+      items: [
+        {
+          title: "Google Cybersecurity Professional Certificate",
+          company: "Google Career Certificates",
+          period: "2025",
+          description:
+            "Completed an in-depth cybersecurity program covering network security, risk management, incident response, and security tools.",
+        },
+        {
+          title: "Virtual Internship in Web Development",
+          company: "Rhombix Technologies",
+          period: "2025",
+          description:
+            "Gained practical experience in modern web development using React.js, Node.js, and Tailwind CSS while working on real client projects.",
+        },
+        {
+          title: "Full-Stack Web Development Certificate",
+          company: "DataFlair",
+          period: "2024",
+          description:
+            "Completed a comprehensive training program covering both frontend and backend development using MERN stack technologies.",
+        },
+         {
+      title: "Diploma in Information Technology (DIT)",
+      company: "Government Institute",
+      period: "2023",
+      description:
+        "Completed a one-year diploma focused on computer systems, programming, and database management.",
+    },
+    {
+      title: "English Language Proficiency Certificate",
+      company: "Language Course",
+      period: "2023",
+      description:
+        "Earned certification for English communication and writing skills, demonstrating strong proficiency for academic and professional use.",
+    },
+      ],
+    },
+  ]
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length)
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
+  }
+
+  return (
+    <section id="experience" className="relative py-20 px-8 md:px-16 lg:px-24 bg-black text-white overflow-hidden">
+      {/* Squares Background */}
+      <div className="absolute inset-0">
+        <Squares 
+          direction="right"
+          speed={0.2}
+          squareSize={60}
+          borderColor="#333" 
+          hoverFillColor="#222"
+        />
+      </div>
+      
+      {/* Content */}
+      <div className="relative z-10 max-w-6xl mx-auto">
+        <motion.h2
+          className="text-4xl font-bold text-center mb-16 text-white"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          My Journey
+        </motion.h2>
+
+        <div className="relative">
+          {/* Navigation Arrows */}
+          <div className="flex justify-center items-center gap-4 mb-8">
+            <button
+              onClick={prevSlide}
+              className="p-3 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 transition-colors backdrop-blur-sm"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            <div className="flex items-center gap-3">
+              {slides[currentSlide].icon}
+              <h3 className="text-2xl font-semibold">{slides[currentSlide].title}</h3>
+            </div>
+            <button
+              onClick={nextSlide}
+              className="p-3 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 transition-colors backdrop-blur-sm"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+          </div>
+
+          {/* Slide Indicators */}
+          <div className="flex justify-center gap-2 mb-8">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-colors ${
+                  index === currentSlide ? "bg-white" : "bg-white/30"
+                }`}
+              />
+            ))}
+          </div>
+
+          {/* Slide Content */}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentSlide}
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -100 }}
+              transition={{ duration: 0.5 }}
+              className="space-y-6"
+            >
+              {slides[currentSlide].items.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105"
+                >
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                    <h4 className="text-xl font-semibold text-white">{item.title}</h4>
+                    <span className="text-sm text-neutral-400 mt-1 md:mt-0">{item.period}</span>
+                  </div>
+                  <p className="text-blue-400 font-medium mb-2">{item.company}</p>
+                  <p className="text-neutral-300 leading-relaxed">{item.description}</p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </AnimatePresence>
+        </div>
+      </div>
+    </section>
+  )
+}
