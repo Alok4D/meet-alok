@@ -27,7 +27,7 @@ export default function HomePage() {
       </main>
       {/* Footer */}
       <footer className="py-8 px-8 md:px-16 lg:px-24 bg-[#000] text-center text-neutral-500 text-sm">
-        <p>&copy; {new Date().getFullYear()} Muhammad Musa Khan. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Alok Roy. All rights reserved.</p>
       </footer>
     </div>
   )
