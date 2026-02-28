@@ -3,7 +3,7 @@
 import { Scene } from "@/components/ui/hero-section"
 import { Button } from "@/components/ui/button"
 import { Cpu, ShieldCheck, Layers, Zap } from "lucide-react"
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import { useState, useEffect } from "react"
 
 const features = [
@@ -30,7 +30,7 @@ const features = [
 ]
 
 // Variants for text animation
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -40,44 +40,44 @@ const containerVariants = {
   },
 }
 
-const wordVariants = {
+const wordVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },
 }
 
 // Variants for button animation
-const buttonContainerVariants = {
+const buttonContainerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
       staggerChildren: 0.2,
-      delayChildren: 2.5,
+      delayChildren: 0.5,
     },
   },
 }
 
-const buttonVariants = {
+const buttonVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },
 }
 
 // Variants for cards animation
-const cardsContainerVariants = {
+const cardsContainerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
       staggerChildren: 0.1,
-      delayChildren: 3.5, // Start after buttons animation
+      delayChildren: 1.0, // Start after buttons animation
     },
   },
 }
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
     transition: {
       duration: 0.5,
@@ -90,17 +90,16 @@ const HeroDemo = () => {
   const [isAnimationComplete, setIsAnimationComplete] = useState(false)
 
   const headingText = "Hi, I'm"
-  const nameText = "Alok Roy."
+  const nameText = "Sree Alok Chandro"
   const subheadingText = "Building the future, one line of code at a time."
-  const descriptionText =
-    "Passionate about building secure and creative web solutions using modern technologies."
+  const descriptionText = "Passionate about building secure and creative web solutions using modern technologies."
 
   // Reset animation state on component mount
   useEffect(() => {
     setIsAnimationComplete(false)
     const timer = setTimeout(() => {
       setIsAnimationComplete(true)
-    }, 3000) // Complete animation after 3 seconds
+    }, 100) // Complete animation after 100ms
 
     return () => clearTimeout(timer)
   }, [])
@@ -131,16 +130,17 @@ const HeroDemo = () => {
               animate={isAnimationComplete ? "visible" : "hidden"}
             >
               {headingText.split(" ").map((word, i) => (
-                <motion.span 
-                  key={i} 
-                  variants={wordVariants} 
+                <motion.span
+                  key={i}
+                  variants={wordVariants}
                   className="inline-block mr-2"
                 >
                   {word}
                 </motion.span>
               ))}
-              <motion.span 
-                variants={wordVariants} 
+              <br />
+              <motion.span
+                variants={wordVariants}
                 className="inline-block mr-2 text-3xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-purple-400 via-purple-600 to-purple-800 bg-clip-text text-transparent drop-shadow-lg animate-pulse"
               >
                 {nameText}
@@ -153,7 +153,7 @@ const HeroDemo = () => {
               ))}
             </motion.h1>
             <motion.p
-              className="text-base md:text-lg text-neutral-300 max-w-2xl"
+              className="text-base md:text-lg text-neutral-200 max-w-2xl"
               variants={containerVariants}
               initial="hidden"
               animate={isAnimationComplete ? "visible" : "hidden"}
@@ -171,7 +171,7 @@ const HeroDemo = () => {
               animate={isAnimationComplete ? "visible" : "hidden"}
             >
               <motion.div variants={buttonVariants}>
-                <Button 
+                <Button
                   onClick={handleViewProjects}
                   className="text-sm px-8 py-3 rounded-xl bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 text-white border border-purple-400/50 shadow-2xl shadow-purple-500/30 hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 font-semibold"
                 >
@@ -179,7 +179,7 @@ const HeroDemo = () => {
                 </Button>
               </motion.div>
               <motion.div variants={buttonVariants}>
-                <Button 
+                <Button
                   onClick={handleContactMe}
                   className="text-sm px-8 py-3 rounded-xl bg-transparent text-white border border-white/20 shadow-none hover:bg-white/10 transition-none"
                 >
@@ -189,9 +189,9 @@ const HeroDemo = () => {
             </motion.div>
           </div>
         </div>
-        
+
         {/* Cards Section - Now follows proper sequence */}
-        <motion.div 
+        <motion.div
           className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 max-w-5xl mx-auto"
           variants={cardsContainerVariants}
           initial="hidden"
