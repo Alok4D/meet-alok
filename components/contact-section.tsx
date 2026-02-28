@@ -13,7 +13,10 @@ import {
   IconBrandGithub,
   IconBrandLinkedin,
   IconBrandTwitter,
-  IconBrandTiktok
+  IconBrandTiktok,
+  IconBrandFacebook,
+  IconBrandTwitterFilled,
+  IconBrandInstagram
 } from "@tabler/icons-react"
 
 export function ContactSection() {
@@ -21,19 +24,19 @@ export function ContactSection() {
     {
       icon: <IconMail className="w-6 h-6" />,
       title: "Email",
-      value: "muhammadmusakhan752@gmail.com",
-      link: "mailto:muhammadmusakhan752@gmail.com"
+      value: "alokroy602701@gmail.com",
+      link: "mailto:alokroy602701@gmail.com"
     },
     {
       icon: <IconPhone className="w-6 h-6" />,
       title: "Phone",
-      value: "+92 317-56 73340",
-      link: "tel:+923175673340"
+      value: "01719277951",
+      link: "tel:+8801719277951"
     },
     {
       icon: <IconMapPin className="w-6 h-6" />,
       title: "Location",
-      value: "Kpk, Pakistan",
+      value: "Dhaka, Bangladesh",
       link: "#"
     }
   ]
@@ -48,13 +51,25 @@ export function ContactSection() {
     {
       icon: <IconBrandLinkedin className="w-6 h-6" />,
       name: "LinkedIn",
-      url: "https://www.linkedin.com/in/muhammad-musa-khan-2229b0273/",
+      url: "https://www.linkedin.com/in/alok-roy-likedin/",
       color: "hover:text-blue-400"
     },
     {
-      icon: <IconBrandTiktok className="w-6 h-6" />,
-      name: "TIKTOK",
-      url: "http://tiktok.com/@musadeveloper",
+      icon: <IconBrandFacebook className="w-6 h-6" />,
+      name: "Facebook",
+      url: "https://www.facebook.com/alok.roy.738161",
+      color: "hover:text-blue-400"
+    },
+    {
+      icon: <IconBrandTwitterFilled className="w-6 h-6" />,
+      name: "Twitter",
+      url: "https://x.com/AlokRoy1880109",
+      color: "hover:text-blue-400"
+    },
+    {
+      icon: <IconBrandInstagram className="w-6 h-6" />,
+      name: "Instagram",
+      url: "https://www.instagram.com/alokroy602701/",
       color: "hover:text-blue-400"
     }
   ]
@@ -145,7 +160,7 @@ export function ContactSection() {
                 <label className="block text-sm font-medium text-neutral-300 mb-2">Message</label>
                 <Textarea 
                   placeholder="Tell me about your project..."
-                  rows={5}
+                  rows={10}
                   className="bg-white/10 border-white/20 text-white placeholder:text-neutral-400 focus:border-purple-500 resize-none"
                 />
               </div>
@@ -226,7 +241,7 @@ export function ContactSection() {
               transition={{ duration: 0.6, delay: 0.7 }}
             >
               <h4 className="text-lg font-semibold mb-3 text-white">Let's Work Together</h4>
-              <p className="text-neutral-300 leading-relaxed">
+              <p className="text-neutral-300 leading-relaxed text-justify tracking-tight">
                 I'm always excited to take on new challenges and collaborate on innovative projects. 
                 Whether you have a specific idea in mind or need help conceptualizing your next big thing, 
                 I'm here to help bring your vision to life.
