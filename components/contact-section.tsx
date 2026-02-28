@@ -160,7 +160,7 @@ export function ContactSection() {
                 <label className="block text-sm font-medium text-neutral-300 mb-2">Message</label>
                 <Textarea 
                   placeholder="Tell me about your project..."
-                  rows={10}
+                  rows={8}
                   className="bg-white/10 border-white/20 text-white placeholder:text-neutral-400 focus:border-purple-500 resize-none"
                 />
               </div>
