@@ -116,8 +116,16 @@ If you want to personalize this portfolio further, the main content lives in the
 
 ## Contact
 
-If you want to connect, update the social links and contact details in the contact section with your latest information.
+If you'd like to get in touch, feel free to reach out through any of the following channels:
+
+| Information | Details |
+| :--- | :--- |
+| **👤 Name** | Sree Alok Chandro |
+| **📧 Email** | [alokroy602701@gmail.com](mailto:alokroy602701@gmail.com) |
+| **🌐 Portfolio** | [meet-alok.vercel.app](https://meet-alok.vercel.app) |
+| **📱 Contact** | [+880 1719277951](tel:+8801719277951) |
 
 ---
 
 Built with care to present my portfolio in a professional and memorable way.
+

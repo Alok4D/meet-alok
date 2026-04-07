@@ -9,8 +9,8 @@ export function AboutSection() {
   const handleDownloadCV = () => {
     // Create a link element to trigger download
     const link = document.createElement('a')
-    link.href = '/Muhammad_Musa_Khan_CV.pdf' // You'll need to add your CV file to the public folder
-    link.download = 'Muhammad_Musa_Khan_CV.pdf'
+      link.href = '/Sree_Alok_Chandro_CV.pdf' // You'll need to add your CV file to the public folder
+    link.download = 'Sree_Alok_Chandro_CV.pdf'
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
@@ -44,7 +44,7 @@ export function AboutSection() {
             transition={{ duration: 0.6 }}
           >
             <div className="w-[450px] h-[450px] border-2 border-white/20 rounded-lg overflow-hidden bg-white/5 backdrop-blur-sm shadow-2xl">
-              <img src="/images/IMG_20251024_224925475_MFNR.jpg" alt="Muhammad Musa Khan" className="w-full h-full object-cover" />
+              <img src="/images/IMG_20251024_224925475_MFNR.jpg" alt="Sree Alok Chandro" className="w-full h-full object-cover" />
             </div>
           </motion.div>
 
@@ -56,9 +56,9 @@ export function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="text-2xl font-semibold text-white">Hello! I'm Alok Roy</h3>
+            <h3 className="text-2xl font-semibold text-white">Hello! I'm Sree Alok Chandro</h3>
             <p className="text-lg text-neutral-300 leading-relaxed">
-              I'm a 22-year-old Computer Science student from Pakistan who enjoys building modern and secure web applications. I love turning ideas into real working websites and learning new tools to make my projects better. I'm interested in becoming a Full-Stack Web Developer and exploring areas like cybersecurity and cloud technology.
+              I'm a 22-year-old Computer Science student from Bangladesh who enjoys building modern and secure web applications. I love turning ideas into real working websites and learning new tools to make my projects better. I'm interested in becoming a Full-Stack Web Developer and exploring areas like cybersecurity and cloud technology.
             </p>
             <p className="text-lg text-neutral-300 leading-relaxed">
               I work with both front-end and back-end development, creating web apps using React, Next.js, Node.js, and MongoDB. I enjoy building websites that are easy to use, look good, and work fast.
@@ -68,10 +68,10 @@ export function AboutSection() {
             </p>
             <div className="flex flex-wrap gap-4 mt-8">
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-2">
-                <span className="text-white font-medium">Age: 19</span>
+                <span className="text-white font-medium">Age: 22</span>
               </div>
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-2">
-                <span className="text-white font-medium">Location: Pakistan</span>
+                <span className="text-white font-medium">Location: Bangladesh</span>
               </div>
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-2">
                 <span className="text-white font-medium">Experience: 3+ Years</span>
