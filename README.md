@@ -129,3 +129,10 @@ If you'd like to get in touch, feel free to reach out through any of the followi
 
 Built with care to present my portfolio in a professional and memorable way.
 
+## Preview
+
+<div align="center">
+  <img src="public/image.png" alt="Portfolio Screenshot" width="100%" style="border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);" />
+</div>
+
+
