@@ -10,38 +10,38 @@ export function ProjectsSection() {
     {
       title: "iNotebook – MERN Stack Notes App",
       description:
-        "A full-stack notes management app with JWT authentication and complete CRUD functionality. Built using React, Node.js, Express, and MongoDB for secure and seamless note handling.",
-      image: "/images/home.png",
+        "Developed a visa support and travel analysis platform providing travel insights, visa guidance, and journey reports for international routes.",
+      image: "/project-images/axif-flare.png",
       technologies: ["React", "Node.js", "Express", "MongoDB", "JWT"],
-      liveUrl: "#",
-      githubUrl: "https://github.com/MUSA-apnacollege/iNotebook?tab=readme-ov-file",
+      liveUrl: "https://axisflare.tech",
+      githubUrl: "https://github.com/Alok4D/axis-flare-frontend",
     },
     {
       title: "Rhombix Music Player",
       description:
         "A modern and stylish music player built with React + Vite. It allows users to create playlists, search songs, and control playback with a clean and responsive UI.",
-      image: "/images/music_player.png",
+      image: "/project-images/Screenshot 2026-05-21 212543.png",
       technologies: ["React", "Vite", "Tailwind CSS", "JavaScript"],
-      liveUrl: "#",
-      githubUrl: "https://github.com/MUSA-apnacollege/Rhombix-Music-Player",
+      liveUrl: "https://eemedicalsupply.com",
+      githubUrl: "https://github.com/Alok4D",
     },
     {
       title: "NewsMonkey – React Real-Time News App",
       description:
         "A responsive news platform fetching live articles from an API and categorizing them into sections like Business, Sports, and Technology.",
-      image: "/images/newsmonkey-ui.png",
+      image: "/project-images/Screenshot 2026-05-21 213300.png",
       technologies: ["React", "TypeScript", "Firebase", "Framer Motion", "Chakra UI"],
-      liveUrl: "#",
-      githubUrl: "https://github.com/MUSA-apnacollege/NewsMonkey-React_app",
+      liveUrl: "https://clash-gambling.vercel.app",
+      githubUrl: "https://github.com/Alok4D/clash-gambling",
     },
      {
     title: "3D Shopping Platform (NEXUS)",
     description:
       "An immersive 3D e-commerce site built with React, Three.js, and Framer Motion. Features real-time product visualization and a modern neon UI.",
-    image: "/images/side.png",
+    image: "/project-images/Screenshot 2026-05-21 213757.png",
     technologies: ["React", "Three.js", "Framer Motion", "Tailwind CSS"],
-    liveUrl: "#",
-    githubUrl: "https://github.com/MUSA-apnacollege/3d-shopping-platform",
+    liveUrl: "https://stayvista-live-2025-ce330.web.app",
+    githubUrl: "https://github.com/Alok4D/client",
   },
   {
     title: "Get Me a Chai – Next.js Crowdfunding Platform",
@@ -50,7 +50,7 @@ export function ProjectsSection() {
     image: "/images/GetMeChai.png",
     technologies: ["Next.js", "MongoDB", "Tailwind CSS"],
     liveUrl: "#",
-    githubUrl: "https://github.com/MUSA-apnacollege/Get_Me_Chai",
+    githubUrl: "https://github.com/Alok4D",
   },
   {
   title: "Password Manager 🔑",
@@ -59,7 +59,7 @@ export function ProjectsSection() {
   image: "/images/password.png",
   technologies: ["Next.js", "Node.js", "Express", "MongoDB", "Tailwind CSS", "JWT", "bcrypt"],
   liveUrl: "#",
-  githubUrl: "https://github.com/MUSA-apnacollege/Password-Manager",
+  githubUrl: "https://github.com/Alok4D",
 },
 
   ]

@@ -1,5 +1,3 @@
-"use client"
-
 import { HeroDemo } from "@/components/hero-demo"
 import { MainHeader } from "@/components/main-header"
 import { AboutSection } from "@/components/about-section"
