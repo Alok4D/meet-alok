@@ -41,25 +41,27 @@ export function ExperienceSection() {
       icon: <GraduationCap className="w-8 h-8" />,
       items: [
         {
-          title: "Bachelor of Computer Science",
-          company: "University of Science Technology",
-          period: "2024 - Present",
+          title: "Bachelor of Science in Computer Science & Engineering (CSE)",
+          company: "Northern University Bangladesh",
+          period: "2026 - Present",
           description:
-            "Currently pursuing a Bachelor's degree in Computer Science with a focus on Software Engineering and Web Development. Actively working on full-stack projects and learning modern technologies.",
+            "Currently pursuing a Bachelor's degree in Computer Science & Engineering (CSE) with a focus on Software Development, Programming, and Modern Web Technologies. Passionate about building real-world full-stack projects and continuously learning new technologies.",
         },
         {
-          title: "Intermediate in Computer Science",
-          company: "Government College",
-          period: "2022 - 2024",
+          title: "Diploma in Computer Science Technology",
+          company: "Dinajpur Polytechnic Institute, Dinajpur",
+          period: "2021 - 2022",
+          cgpa: "3.45 / 4.00",
           description:
-            "Studied computer fundamentals, programming basics, and mathematics. Built a strong foundation in logic building and problem-solving.",
+            "Currently pursuing a Diploma in Computer Science Technology with a focus on Programming, Software Development, Database Management, and Web Technologies. Actively building real-world projects and improving problem-solving skills.",
         },
         {
-          title: "Online Courses & Bootcamps",
-          company: "Various Platforms",
-          period: "2019 - Present",
+          title: "SSC (Science) – Secondary School Certificate",
+          company: "Rangamati High School",
+          period: "2020 – 2021",
+          cgpa: "5.00 / 5.00",
           description:
-            "Completed multiple online courses in React, Node.js, and modern web development from platforms like Udemy, Coursera, and YouTube.",
+            "Completed Secondary School Certificate in Science with excellent academic performance and a strong foundation in Mathematics, Physics, and Computer fundamentals.",
         },
       ],
     },
@@ -195,7 +197,14 @@ export function ExperienceSection() {
                     <h4 className="text-xl font-semibold text-white">{item.title}</h4>
                     <span className="text-sm text-neutral-400 mt-1 md:mt-0">{item.period}</span>
                   </div>
-                  <p className="text-blue-400 font-medium mb-2">{item.company}</p>
+                  <div className="flex flex-wrap items-center gap-3 mb-2">
+                    <p className="text-blue-400 font-medium">{item.company}</p>
+                    {item.cgpa && (
+                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 shadow-[0_0_10px_rgba(16,185,129,0.1)]">
+                        CGPA: {item.cgpa}
+                      </span>
+                    )}
+                  </div>
                   <p className="text-neutral-300 leading-relaxed">{item.description}</p>
                 </motion.div>
               ))}
