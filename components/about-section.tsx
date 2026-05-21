@@ -6,11 +6,13 @@ import { IconDownload } from "@tabler/icons-react"
 import { PurpleFlowingLights } from "@/components/ui/purple-flowing-lights"
 
 export function AboutSection() {
+
+
   const handleDownloadCV = () => {
     // Create a link element to trigger download
     const link = document.createElement('a')
-      link.href = '/Sree_Alok_Chandro_CV.pdf' // You'll need to add your CV file to the public folder
-    link.download = 'Sree_Alok_Chandro_CV.pdf'
+    link.href = '/cv/alok-roy-resume.pdf' // You'll need to add your CV file to the public folder
+    link.download = 'alok-roy-resume.pdf'
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
@@ -44,7 +46,7 @@ export function AboutSection() {
             transition={{ duration: 0.6 }}
           >
             <div className="w-[450px] h-[450px] border-2 border-white/20 rounded-lg overflow-hidden bg-white/5 backdrop-blur-sm shadow-2xl">
-              <img src="/images/IMG_20251024_224925475_MFNR.jpg" alt="Sree Alok Chandro" className="w-full h-full object-cover" />
+              <img src="/about-image/Alok-profession-image.jpg" alt="Sree Alok Chandro" className="w-full h-full object-cover" />
             </div>
           </motion.div>
 
@@ -74,7 +76,7 @@ export function AboutSection() {
                 <span className="text-white font-medium">Location: Bangladesh</span>
               </div>
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-2">
-                <span className="text-white font-medium">Experience: 3+ Years</span>
+                <span className="text-white font-medium">Experience: 6 Month</span>
               </div>
             </div>
             
