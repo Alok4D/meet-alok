@@ -3,12 +3,28 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Squares } from "@/components/ui/squares-background"
-import { ChevronLeft, ChevronRight, Briefcase, GraduationCap, Award } from "lucide-react"
+import { ChevronLeft, ChevronRight, Briefcase, GraduationCap, Award, MapPin } from "lucide-react"
+
+interface SlideItem {
+  title: string;
+  company: string;
+  period: string;
+  description: string;
+  cgpa?: string;
+  mapUrl?: string;
+}
+
+interface Slide {
+  title: string;
+  icon: React.ReactNode;
+  items: SlideItem[];
+}
 
 export function ExperienceSection() {
+  
   const [currentSlide, setCurrentSlide] = useState(0)
 
-  const slides = [
+  const slides: Slide[] = [
     {
       title: "Experience",
       icon: <Briefcase className="w-8 h-8" />,
@@ -44,6 +60,7 @@ export function ExperienceSection() {
           title: "Bachelor of Science in Computer Science & Engineering (CSE)",
           company: "Northern University Bangladesh",
           period: "2026 - Present",
+          mapUrl: "https://maps.app.goo.gl/YdqEHLnADanEinbr5",
           description:
             "Currently pursuing a Bachelor's degree in Computer Science & Engineering (CSE) with a focus on Software Development, Programming, and Modern Web Technologies. Passionate about building real-world full-stack projects and continuously learning new technologies.",
         },
@@ -52,6 +69,7 @@ export function ExperienceSection() {
           company: "Dinajpur Polytechnic Institute, Dinajpur",
           period: "2021 - 2022",
           cgpa: "3.45 / 4.00",
+          mapUrl: "https://maps.app.goo.gl/Bufk2M45Ve4yK7Qa8",
           description:
             "Currently pursuing a Diploma in Computer Science Technology with a focus on Programming, Software Development, Database Management, and Web Technologies. Actively building real-world projects and improving problem-solving skills.",
         },
@@ -59,6 +77,7 @@ export function ExperienceSection() {
           title: "SSC (Science) – Secondary School Certificate",
           company: "Rangamati High School",
           period: "2020 – 2021",
+          mapUrl: "https://maps.app.goo.gl/MmnTsnU2vSEzbij97",                  
           cgpa: "5.00 / 5.00",
           description:
             "Completed Secondary School Certificate in Science with excellent academic performance and a strong foundation in Mathematics, Physics, and Computer fundamentals.",
@@ -198,7 +217,19 @@ export function ExperienceSection() {
                     <span className="text-sm text-neutral-400 mt-1 md:mt-0">{item.period}</span>
                   </div>
                   <div className="flex flex-wrap items-center gap-3 mb-2">
-                    <p className="text-blue-400 font-medium">{item.company}</p>
+                    {item.mapUrl ? (
+                      <a
+                        href={item.mapUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 font-medium transition-colors group/map"
+                      >
+                        <span>{item.company}</span>
+                        <MapPin className="w-3.5 h-3.5 opacity-70 group-hover/map:opacity-100 group-hover/map:translate-y-[-2px] transition-all duration-300" />
+                      </a>
+                    ) : (
+                      <p className="text-blue-400 font-medium">{item.company}</p>
+                    )}
                     {item.cgpa && (
                       <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 shadow-[0_0_10px_rgba(16,185,129,0.1)]">
                         CGPA: {item.cgpa}
