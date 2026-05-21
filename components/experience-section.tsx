@@ -89,16 +89,16 @@ export function ExperienceSection() {
       icon: <Award className="w-8 h-8" />,
       items: [
         {
-          title: "Google Cybersecurity Professional Certificate",
-          company: "Google Career Certificates",
-          period: "2025",
+          title: "Complete Web Development Course",
+          company: "Course Certificates",
+          period: "2022",
           description:
-            "Completed an in-depth cybersecurity program covering network security, risk management, incident response, and security tools.",
+            "Successfully completed a complete web development course covering HTML, CSS, JavaScript, React.js, Next.js, Node.js, Express.js, MongoDB, and Tailwind CSS with hands-on projects.",
         },
         {
-          title: "Virtual Internship in Web Development",
-          company: "Rhombix Technologies",
-          period: "2025",
+          title: "English Communication Skills",
+          company: "Course Certificates",
+          period: "2022",
           description:
             "Gained practical experience in modern web development using React.js, Node.js, and Tailwind CSS while working on real client projects.",
         },
