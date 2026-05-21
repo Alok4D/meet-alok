@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { IconDownload } from "@tabler/icons-react"
 import { PurpleFlowingLights } from "@/components/ui/purple-flowing-lights"
+import Image from "next/image"
 
 export function AboutSection() {
 
@@ -11,7 +12,7 @@ export function AboutSection() {
   const handleDownloadCV = () => {
     // Create a link element to trigger download
     const link = document.createElement('a')
-    link.href = '/cv/alok-roy-resume.pdf' // You'll need to add your CV file to the public folder
+    link.href = '/cv/alok-roy-resume.pdf'
     link.download = 'alok-roy-resume.pdf'
     document.body.appendChild(link)
     link.click()
@@ -46,7 +47,10 @@ export function AboutSection() {
             transition={{ duration: 0.6 }}
           >
             <div className="w-[450px] h-[450px] border-2 border-white/20 rounded-lg overflow-hidden bg-white/5 backdrop-blur-sm shadow-2xl">
-              <img src="/about-image/Alok-profession-image.jpg" alt="Sree Alok Chandro" className="w-full h-full object-cover" />
+              <Image src="/about-image/Alok-profession-image.jpg" alt="Sree Alok Chandro" width={450} height={450}
+              draggable={false}
+              priority={true}
+              className="w-full h-full object-cover" />
             </div>
           </motion.div>
 
