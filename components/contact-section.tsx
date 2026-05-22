@@ -18,8 +18,95 @@ import {
   IconBrandTwitterFilled,
   IconBrandInstagram
 } from "@tabler/icons-react"
+import { useState, useEffect } from "react"
+import { useForm } from "react-hook-form"
+import Swal from "sweetalert2"
+import emailjs from "@emailjs/browser"
+import { toast } from "react-hot-toast"
 
 export function ContactSection() {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      subject: "",
+      msg: "",
+    }
+  });
+
+
+  // emailjs for contact form
+  const [mailSending, setMailSending] = useState(false);
+
+  const handleSendMessage = async (msgData) => {
+    setMailSending(true);
+    const fullName = `${msgData.firstName} ${msgData.lastName}`.trim();
+
+    Swal.fire({
+      title: "Sending Message...",
+      text: "Please wait a moment!",
+      icon: "info",
+      color: "#fff",
+      background: "#05030efc",
+      allowOutsideClick: false,
+      didOpen: () => Swal.showLoading(),
+    });
+
+    try {
+      console.log("Sending message to admin and auto-reply to user");
+
+      // 1️⃣ Send message to Admin (your Gmail)
+      await emailjs.send(
+        "service_025dcpe", // Your Service ID
+        "template_etaio6n", // Admin Template ID
+        {
+          name: fullName,
+          email: msgData.email,
+          msg: msgData.msg,
+        },
+        "F9-rnJCGVisBrLm_G" // Public Key
+      );
+
+      toast.success("Message Sent!");
+      Swal.fire({
+        title: "Message Sent!",
+        text: `Thank you, ${fullName}! Please check your email.`,
+        icon: "success",
+        confirmButtonText: "Okay",
+        color: "#fff",
+        background: "#05030efc",
+      });
+
+      reset(); // Reset form
+    } catch (error) {
+      console.error(error);
+      Swal.fire({
+        title: "Message Sending Failed!",
+        text: error?.text || "Something went wrong! Please try again later.",
+        icon: "error",
+        confirmButtonText: "Close",
+        color: "#fff",
+        background: "#05030efc",
+      });
+    } finally {
+      setMailSending(false);
+    }
+  };
+
+  useEffect(() => {
+    if (errors.firstName) toast.error(errors.firstName.message, { duration: 2000 });
+    if (errors.lastName) toast.error(errors.lastName.message, { duration: 2000 });
+    if (errors.email) toast.error(errors.email.message, { duration: 2000 });
+    if (errors.msg) toast.error(errors.msg.message, { duration: 2000 });
+  }, [errors.firstName, errors.lastName, errors.email, errors.msg]);
+
+
   const contactInfo = [
     {
       icon: <IconMail className="w-6 h-6" />,
@@ -121,7 +208,7 @@ export function ContactSection() {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <h3 className="text-2xl font-semibold mb-6 text-white">Send Message</h3>
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit(handleSendMessage)} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-neutral-300 mb-2">First Name</label>
@@ -129,6 +216,7 @@ export function ContactSection() {
                     type="text" 
                     placeholder="John"
                     className="bg-white/10 border-white/20 text-white placeholder:text-neutral-400 focus:border-purple-500"
+                    {...register("firstName", { required: "First name is required" })}
                   />
                 </div>
                 <div>
@@ -137,6 +225,7 @@ export function ContactSection() {
                     type="text" 
                     placeholder="Doe"
                     className="bg-white/10 border-white/20 text-white placeholder:text-neutral-400 focus:border-purple-500"
+                    {...register("lastName", { required: "Last name is required" })}
                   />
                 </div>
               </div>
@@ -146,6 +235,7 @@ export function ContactSection() {
                   type="email" 
                   placeholder="john@example.com"
                   className="bg-white/10 border-white/20 text-white placeholder:text-neutral-400 focus:border-purple-500"
+                  {...register("email", { required: "Email is required" })}
                 />
               </div>
               <div>
@@ -154,6 +244,7 @@ export function ContactSection() {
                   type="text" 
                   placeholder="Project Inquiry"
                   className="bg-white/10 border-white/20 text-white placeholder:text-neutral-400 focus:border-purple-500"
+                  {...register("subject")}
                 />
               </div>
               <div>
@@ -162,14 +253,16 @@ export function ContactSection() {
                   placeholder="Tell me about your project..."
                   rows={8}
                   className="bg-white/10 border-white/20 text-white placeholder:text-neutral-400 focus:border-purple-500 resize-none"
+                  {...register("msg", { required: "Message is required" })}
                 />
               </div>
               <Button 
                 type="submit"
+                disabled={mailSending}
                 className="w-full bg-purple-600 hover:bg-purple-700 text-white border-none"
               >
                 <IconSend className="w-4 h-4 mr-2" />
-                Send Message
+                {mailSending ? "Sending Message..." : "Send Message"}
               </Button>
             </form>
           </motion.div>

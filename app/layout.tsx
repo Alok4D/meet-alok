@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   generator: 'React',
 }
 
+import { Toaster } from 'react-hot-toast'
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -25,7 +27,10 @@ html {
 }
         `}</style>
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Toaster position="top-center" reverseOrder={false} />
+      </body>
     </html>
   )
 }
