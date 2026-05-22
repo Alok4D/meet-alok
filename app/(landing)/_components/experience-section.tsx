@@ -15,6 +15,7 @@ interface SlideItem {
   technologies?: string[];
   cgpa?: string;
   mapUrl?: string;
+  certificateUrl?: string;
 }
 
 interface Slide {
@@ -88,36 +89,17 @@ export function ExperienceSection() {
           title: "Complete Web Development Course",
           company: "Course Certificates",
           period: "2022",
+          certificateUrl: "https://drive.google.com/file/d/1Y2eSJ_QRe9N8B5ICbl6zEZ7FNa7DHzSX/view",
           description:
-            "Successfully completed a complete web development course covering HTML, CSS, JavaScript, React.js, Next.js, Node.js, Express.js, MongoDB, and Tailwind CSS with hands-on projects."
+            "Successfully completed a comprehensive web development course covering HTML, CSS, JavaScript, React.js, Next.js, Node.js, Express.js, MongoDB, and Tailwind CSS, including practical hands-on projects and real-world application development."
         },
         {
           title: "English Communication Skills",
           company: "Course Certificates",
           period: "2022",
+          certificateUrl: "https://drive.google.com/drive/u/0/home",
           description:
-            "Gained practical experience in modern web development using React.js, Node.js, and Tailwind CSS while working on real client projects."
-        },
-        {
-          title: "Full-Stack Web Development Certificate",
-          company: "DataFlair",
-          period: "2024",
-          description:
-            "Completed a comprehensive training program covering both frontend and backend development using MERN stack technologies."
-        },
-        {
-          title: "Diploma in Information Technology (DIT)",
-          company: "Government Institute",
-          period: "2023",
-          description:
-            "Completed a one-year diploma focused on computer systems, programming, and database management."
-        },
-        {
-          title: "English Language Proficiency Certificate",
-          company: "Language Course",
-          period: "2023",
-          description:
-            "Earned certification for English communication and writing skills, demonstrating strong proficiency for academic and professional use."
+            "Completed an English communication skills course focused on improving speaking, listening, reading, and professional communication abilities for personal and workplace development."
         }
       ]
     }
@@ -288,6 +270,16 @@ export function ExperienceSection() {
                         >
                           <span>{item.company}</span>
                           <MapPin className="w-3.5 h-3.5 opacity-70 group-hover/map:opacity-100 group-hover/map:translate-y-[-2px] transition-all duration-300" />
+                        </a>
+                      ) : item.certificateUrl ? (
+                        <a
+                          href={item.certificateUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 font-medium transition-colors group/link"
+                        >
+                          <span>{item.company}</span>
+                          <Award className="w-3.5 h-3.5 opacity-70 group-hover/link:opacity-100 transition-all duration-300" />
                         </a>
                       ) : (
                         <p className="text-blue-400 font-medium">{item.company}</p>
