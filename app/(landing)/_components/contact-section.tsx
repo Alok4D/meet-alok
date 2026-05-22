@@ -178,7 +178,7 @@ export function ContactSection() {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto">
         <motion.h2
-          className="text-4xl font-bold text-center mb-16 text-white"
+          className="text-4xl font-bold text-center mb-10 text-white"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -187,13 +187,13 @@ export function ContactSection() {
           Get In Touch
         </motion.h2>
         <motion.p
-          className="text-lg text-neutral-300 text-center mb-12 max-w-3xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
+          className="text-lg text-neutral-300 text-center mb-12 max-w-2xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}               
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Ready to start your next project? Let's discuss how I can help bring your ideas to life.
+          Feel free to reach out for collaboration, project inquiries, or just to say hello. I'm always open to discussing new opportunities and ideas!
         </motion.p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
