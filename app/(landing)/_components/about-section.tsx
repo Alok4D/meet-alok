@@ -12,8 +12,8 @@ export function AboutSection() {
   const handleDownloadCV = () => {
     // Create a link element to trigger download
     const link = document.createElement('a')
-    link.href = '/cv/alok-roy-resume.pdf'
-    link.download = 'alok-roy-resume.pdf'
+    link.href = '/cv/MERN Alok-Resume  -  Frontend Developer.pdf'
+    link.download = '/cv/MERN Alok-Resume  -  Frontend Developer.pdf'
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
@@ -37,7 +37,7 @@ export function AboutSection() {
         >
           About Me
         </motion.h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ">    {/* justify-items-center */}
           {/* Image */}
           <motion.div
             className="flex justify-center lg:justify-start"
@@ -64,25 +64,15 @@ export function AboutSection() {
           >
             <h3 className="text-2xl font-semibold text-white">Hello! I'm Sree Alok Chandro</h3>
             <p className="text-lg text-neutral-300 leading-relaxed">
-              I'm a 22-year-old Computer Science student from Bangladesh who enjoys building modern and secure web applications. I love turning ideas into real working websites and learning new tools to make my projects better. I'm interested in becoming a Full-Stack Web Developer and exploring areas like cybersecurity and cloud technology.
+             a web designer and developer with 2 years of experience. My journey in programming began with a curiosity for how websites are built, and that spark led me to learn React, Tailwind CSS, and JavaScript. Over time, I’ve developed responsive websites and honed my problem-solving skills. Outside of programming, I enjoy Travel, Reading Books. These hobbies allow me to stay creative and energized and helps me approach my work with fresh ideas. I believe in continuous learning, and I’m always looking for opportunities to improve both professionally and personally.
             </p>
-            <p className="text-lg text-neutral-300 leading-relaxed">
+            {/* <p className="text-lg text-neutral-300 leading-relaxed">
               I work with both front-end and back-end development, creating web apps using React, Next.js, Node.js, and MongoDB. I enjoy building websites that are easy to use, look good, and work fast.
-            </p>
+            </p> */}
             <p className="text-lg text-neutral-300 leading-relaxed">
-              When I'm not coding, I like exploring new technologies and learning new skills to improve my work. I enjoy sharing ideas with others and believe in always learning to stay updated with the latest tech trends.
+             I have around 1 year of professional experience in MERN. And recently have been working remotely in a company for last 6 months as a Front-end Engineer. And like this, I would like to see myself as a magnificent Full-Stack Engineer in near future.
             </p>
-            <div className="flex flex-wrap gap-4 mt-8">
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-2">
-                <span className="text-white font-medium">Age: 22</span>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-2">
-                <span className="text-white font-medium">Location: Bangladesh</span>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-2">
-                <span className="text-white font-medium">Experience: 6 Month</span>
-              </div>
-            </div>
+         
             
             {/* CV Download Button */}
             <motion.div
@@ -94,7 +84,7 @@ export function AboutSection() {
             >
               <Button
                 onClick={handleDownloadCV}
-                className="bg-linear-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-none px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105 shadow-lg"
+                className="bg-linear-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-none px-8 py-3 rounded-md font-medium transition-all duration-300 hover:scale-105 shadow-lg cursor-pointer"
               >
                 <IconDownload className="w-5 h-5 mr-2" />
                 Download My CV
