@@ -45,7 +45,7 @@ export function ContactSection() {
     {
       icon: <IconBrandGithub className="w-6 h-6" />,
       name: "GitHub",
-      url: "https://github.com/MUSA-apnacollege",
+      url: "https://github.com/alok4d",
       color: "hover:text-gray-400"
     },
     {
@@ -213,14 +213,14 @@ export function ContactSection() {
 
             <div>
               <h3 className="text-2xl font-semibold mb-6 text-white">Follow Me</h3>
-              <div className="flex gap-4">
+              <div className="flex flex-wrap gap-3 sm:gap-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
                     key={social.name}
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg hover:bg-white/10 transition-all duration-300 text-neutral-300 ${social.color}`}
+                    className={`p-3 sm:p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg hover:bg-white/10 transition-all duration-300 text-neutral-300 ${social.color}`}
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
