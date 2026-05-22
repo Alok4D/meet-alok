@@ -8,9 +8,8 @@ import {
   IconBrandNodejs,
   IconBrandPython,
   IconDatabase,
-  IconBrandGit,
   IconCloud,
-  IconDeviceMobile,
+  IconHierarchy,
 } from "@tabler/icons-react"
 
 // Custom Skills Card Component
@@ -90,9 +89,9 @@ export function SkillsSection() {
     icon: <IconCloud className="w-6 h-6" />,
   },
     {
-      title: "Mobile Development",
-      description: "React Native, Progressive Web Apps, Responsive Design",
-      icon: <IconDeviceMobile className="w-6 h-6" />,
+      title: "State Management",
+      description: "Redux Toolkit, RTK Query, Context API, Global State Management",
+      icon: <IconHierarchy className="w-6 h-6" />,
     },
     {
       title: "Programming Languages",
