@@ -12,7 +12,6 @@ import {
   IconHierarchy,
 } from "@tabler/icons-react"
 
-// Custom Skills Card Component
 const SkillsCard = ({
   title,
   description,
@@ -65,22 +64,22 @@ export function SkillsSection() {
   const skills = [
     {
       title: "Frontend Development",
-      description: "React, Next.js, TypeScript, Tailwind CSS, HTML5, CSS3, JavaScript ES6+",
+      description: "React, Next.js, JavaScript ES6+, TypeScript, Tailwind CSS, Redux, Context API, REST API integration.",
       icon: <IconBrandReact className="w-6 h-6" />,
     },
     {
       title: "Backend Development",
-      description: "Node.js, Express.js, RESTful APIs",
+      description: "Node.js, Express.js, MongoDB, Mongoose, TypeScript, REST APIs, JWT.",
       icon: <IconBrandNodejs className="w-6 h-6" />,
     },
     {
       title: "Database Management",
-      description: "PostgreSQL, MongoDB, Supabase, Database Design",
+      description: "PostgreSQL, MongoDB, Database Design, Data Modeling, CRUD operations, Mongoose.",
       icon: <IconDatabase className="w-6 h-6" />,
     },
     {
       title: "Version Control",
-      description: "Git, GitHub, Project Collaboration",
+     description: "Git, GitHub, Branching & Merging, Pull Requests, Commit Management, Project Collaboration.",
       icon: <IconCloud className="w-6 h-6" />,
     },
     {
@@ -100,7 +99,7 @@ export function SkillsSection() {
     },
     {
       title: "Modern Frameworks",
-      description: "Next.js, Express.js, ",
+      description: "REST API & GraphQL basics, Microservices concepts, Full-stack architecture, SEO-friendly rendering.",
       icon: <IconBrandNextjs className="w-6 h-6" />,
     },
   ]
