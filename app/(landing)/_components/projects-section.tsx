@@ -47,19 +47,19 @@ export function ProjectsSection() {
     title: "Get Me a Chai – Next.js Crowdfunding Platform",
     description:
       "A creator-support web app inspired by 'Buy Me a Coffee', enabling secure payments and creator donations. Built with Next.js, MongoDB, and Tailwind CSS.",
-    image: "/images/GetMeChai.png",
+    image: "/project-images/Screenshot 2026-05-22 085640.png",
     technologies: ["Next.js", "MongoDB", "Tailwind CSS"],
-    liveUrl: "#",
+    liveUrl: "https://www.myjewishtales.com",
     githubUrl: "https://github.com/Alok4D",
   },
   {
   title: "Password Manager 🔑",
   description:
     "A full-stack password manager application built with Next.js, Node.js, Express, MongoDB, and Tailwind CSS. Users can securely store, update, and manage their passwords in one place with an intuitive UI and JWT-based authentication.",
-  image: "/images/password.png",
+  image: "/project-images/Screenshot 2026-05-22 111949.png",
   technologies: ["Next.js", "Node.js", "Express", "MongoDB", "Tailwind CSS", "JWT", "bcrypt"],
-  liveUrl: "#",
-  githubUrl: "https://github.com/Alok4D",
+  liveUrl: "https://svariois.vercel.app",
+  githubUrl: "https://github.com/Alok4D/svario-frontend-landing",
 },
 
   ]

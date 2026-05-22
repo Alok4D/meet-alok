@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 
 export function TechnologiesSection() {
+  
   const technologies = [
     { name: "ChatGPT", image: "/images/chatgpt.png" },
     { name: "Cursor", image: "/images/cursor.png" },
