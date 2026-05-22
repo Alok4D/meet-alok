@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: 'Sree Alok Chandro',
   description: 'Full Stack Developer',
   generator: 'React',
+  icons: {
+    icon: '/favicon.png',
+  },
 }
 
 import { Toaster } from 'react-hot-toast'
