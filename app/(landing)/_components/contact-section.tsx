@@ -12,8 +12,6 @@ import {
   IconSend,
   IconBrandGithub,
   IconBrandLinkedin,
-  IconBrandTwitter,
-  IconBrandTiktok,
   IconBrandFacebook,
   IconBrandTwitterFilled,
   IconBrandInstagram
@@ -44,7 +42,7 @@ export function ContactSection() {
   // emailjs for contact form
   const [mailSending, setMailSending] = useState(false);
 
-  const handleSendMessage = async (msgData) => {
+  const handleSendMessage = async (msgData: any) => {
     setMailSending(true);
     const fullName = `${msgData.firstName} ${msgData.lastName}`.trim();
 
@@ -88,7 +86,7 @@ export function ContactSection() {
       console.error(error);
       Swal.fire({
         title: "Message Sending Failed!",
-        text: error?.text || "Something went wrong! Please try again later.",
+        text: (error as any)?.text || "Something went wrong! Please try again later.",
         icon: "error",
         confirmButtonText: "Close",
         color: "#fff",
@@ -100,10 +98,10 @@ export function ContactSection() {
   };
 
   useEffect(() => {
-    if (errors.firstName) toast.error(errors.firstName.message, { duration: 2000 });
-    if (errors.lastName) toast.error(errors.lastName.message, { duration: 2000 });
-    if (errors.email) toast.error(errors.email.message, { duration: 2000 });
-    if (errors.msg) toast.error(errors.msg.message, { duration: 2000 });
+    if (errors.firstName) toast.error(errors.firstName.message || "First name is required", { duration: 2000 });
+    if (errors.lastName) toast.error(errors.lastName.message || "Last name is required", { duration: 2000 });
+    if (errors.email) toast.error(errors.email.message || "Email is required", { duration: 2000 });
+    if (errors.msg) toast.error(errors.msg.message || "Message is required", { duration: 2000 });
   }, [errors.firstName, errors.lastName, errors.email, errors.msg]);
 
 
