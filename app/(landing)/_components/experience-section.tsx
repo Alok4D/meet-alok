@@ -39,6 +39,7 @@ export function ExperienceSection() {
           location: "Plot D-5, Road- 10, Block- D, Banasree, Rampura, Dhaka 1219",
           description: "",
           points: [
+            "Managed multiple projects and handled client communication effectively.",
             "Built responsive and user-friendly web applications using Next.js, React.js, Redux, and RTK Query.",
             "Collaborated closely with backend developers to ensure smooth API integration and consistent data flow.",
             "Worked on projects for international clients, gathering requirements and providing consistent progress updates.",

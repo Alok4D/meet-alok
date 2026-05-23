@@ -13,8 +13,8 @@ export function MainHeader() {
     { name: "home", label: "Home", url: "#", icon: Home },
     { name: "about", label: "About", url: "#about", icon: User },
     { name: "skills", label: "Skills", url: "#skills", icon: Code },
-    { name: "experience", label: "Experience", url: "#experience", icon: Briefcase },
     { name: "projects", label: "Projects", url: "#projects", icon: Sparkles },
+    { name: "experience", label: "Experience", url: "#experience", icon: Briefcase },
     { name: "technologies", label: "Technologies", url: "#technologies", icon: Cpu }, // ✅ Added Technologies section
     { name: "contact", label: "Contact", url: "#contact", icon: Mail },
   ]

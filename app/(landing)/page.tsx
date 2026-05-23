@@ -17,9 +17,9 @@ export default function HomePage() {
         <HeroDemo />
         <AboutSection />
         <SkillsSection />
+        <ProjectsSection />
         <ExperienceSection />
         <WhyChooseMeSection />
-        <ProjectsSection />
         <TechnologiesSection />
         <ContactSection />
       </main>
