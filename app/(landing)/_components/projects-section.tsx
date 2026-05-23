@@ -17,11 +17,11 @@ export function ProjectsSection() {
   githubUrl: "#",
 },
     {
-      title: "Rhombix Music Player",
+      title: "EE Medical Supply",
       description:
-        "A modern and stylish music player built with React + Vite. It allows users to create playlists, search songs, and control playback with a clean and responsive UI.",
+        "Developed a comprehensive medicine-based eCommerce platform with secure ordering, product management, and user-friendly interface.",
       image: "/project-images/Screenshot 2026-05-21 212543.png",
-      technologies: ["React", "Vite", "Tailwind CSS", "JavaScript"],
+      technologies: ["Next.js", "Tailwind CSS", "Redux", "RTK Query", "Node.js", "Express.js", "MongoDB", "JWT", "Stripe", "PayPal", "Firebase"],
       liveUrl: "https://eemedicalsupply.com",
       githubUrl: "https://github.com/Alok4D",
     },
