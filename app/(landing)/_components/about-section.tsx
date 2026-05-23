@@ -64,7 +64,7 @@ export function AboutSection() {
           >
             <h3 className="text-2xl font-semibold text-white">Hello! I'm Sree Alok Chandro</h3>
             <p className="text-lg text-neutral-300 leading-relaxed">
-             a web designer and developer with 2 years of experience. My journey in programming began with a curiosity for how websites are built, and that spark led me to learn React, Tailwind CSS, and JavaScript. Over time, I’ve developed responsive websites and honed my problem-solving skills. Outside of programming, I enjoy Travel, Reading Books. These hobbies allow me to stay creative and energized and helps me approach my work with fresh ideas. I believe in continuous learning, and I’m always looking for opportunities to improve both professionally and personally.
+             A web designer and developer with 2 years of experience. My journey in programming began with a curiosity for how websites are built, and that spark led me to learn React, Tailwind CSS, and JavaScript. Over time, I’ve developed responsive websites and honed my problem-solving skills. Outside of programming, I enjoy Travel, Reading Books. These hobbies allow me to stay creative and energized and helps me approach my work with fresh ideas. I believe in continuous learning, and I’m always looking for opportunities to improve both professionally and personally.
             </p>
             {/* <p className="text-lg text-neutral-300 leading-relaxed">
               I work with both front-end and back-end development, creating web apps using React, Next.js, Node.js, and MongoDB. I enjoy building websites that are easy to use, look good, and work fast.
