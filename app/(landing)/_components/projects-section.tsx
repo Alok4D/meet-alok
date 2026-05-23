@@ -7,15 +7,15 @@ import { ExternalLink, Github } from "lucide-react"
 
 export function ProjectsSection() {
   const projects = [
-    {
-      title: "iNotebook – MERN Stack Notes App",
-      description:
-        "Developed a visa support and travel analysis platform providing travel insights, visa guidance, and journey reports for international routes.",
-      image: "/project-images/axif-flare.png",
-      technologies: ["React", "Node.js", "Express", "MongoDB", "JWT"],
-      liveUrl: "https://axisflare.tech",
-      githubUrl: "https://github.com/Alok4D/axis-flare-frontend",
-    },
+      {
+  title: "Cian Collective",
+  description:
+    "A faith-based SaaS platform empowering worship communities through transformative music ministry, elevating creators to share Christ’s message globally through love, faith, and connection.",
+  image: "/project-images/image.png",
+  technologies: ["Next.js", "Node.js", "Express", "MongoDB", "Tailwind CSS", "bcrypt", "shadcn/ui", "lenis"],
+  liveUrl: "https://www.ciancollective.org",
+  githubUrl: "#",
+},
     {
       title: "Rhombix Music Player",
       description:
@@ -25,6 +25,16 @@ export function ProjectsSection() {
       liveUrl: "https://eemedicalsupply.com",
       githubUrl: "https://github.com/Alok4D",
     },
+    {
+      title: "iNotebook – MERN Stack Notes App",
+      description:
+        "Developed a visa support and travel analysis platform providing travel insights, visa guidance, and journey reports for international routes.",
+      image: "/project-images/axif-flare.png",
+      technologies: ["React", "Node.js", "Express", "MongoDB", "JWT"],
+      liveUrl: "https://axisflare.tech",
+      githubUrl: "https://github.com/Alok4D/axis-flare-frontend",
+    },
+
     {
       title: "NewsMonkey – React Real-Time News App",
       description:
@@ -52,15 +62,7 @@ export function ProjectsSection() {
     liveUrl: "https://www.myjewishtales.com",
     githubUrl: "https://github.com/Alok4D",
   },
-  {
-  title: "Password Manager 🔑",
-  description:
-    "A full-stack password manager application built with Next.js, Node.js, Express, MongoDB, and Tailwind CSS. Users can securely store, update, and manage their passwords in one place with an intuitive UI and JWT-based authentication.",
-  image: "/project-images/Screenshot 2026-05-22 111949.png",
-  technologies: ["Next.js", "Node.js", "Express", "MongoDB", "Tailwind CSS", "JWT", "bcrypt"],
-  liveUrl: "https://svariois.vercel.app",
-  githubUrl: "https://github.com/Alok4D/svario-frontend-landing",
-},
+
 
   ]
 
@@ -123,19 +125,28 @@ export function ProjectsSection() {
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Live Demo
                   </Button>
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="border-white text-white hover:bg-white hover:text-black bg-transparent"
-                    onClick={() => window.open(project.githubUrl, "_blank")}
-                  >
-                    <Github className="w-4 h-4 mr-2" />
-                    Code
-                  </Button>
+                  {project.githubUrl && project.githubUrl !== "#" && (
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="border-white text-white hover:bg-white hover:text-black bg-transparent"
+                      onClick={() => window.open(project.githubUrl, "_blank")}
+                    >
+                      <Github className="w-4 h-4 mr-2" />
+                      Code
+                    </Button>
+                  )}
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-3 text-white">{project.title}</h3>
+                <div className="flex items-center justify-between gap-2 mb-3">
+                  <h3 className="text-xl font-semibold text-white">{project.title}</h3>
+                  {(!project.githubUrl || project.githubUrl === "#") && (
+                    <span className="px-2 py-0.5 bg-violet-500/10 border border-violet-500/30 rounded text-[10px] font-medium text-violet-400 whitespace-nowrap">
+                      Client Project
+                    </span>
+                  )}
+                </div>
                 <p className="text-neutral-300 text-sm mb-4 leading-relaxed">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
