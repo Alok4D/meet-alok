@@ -26,43 +26,44 @@ export function ProjectsSection() {
       githubUrl: "https://github.com/Alok4D",
     },
     {
-      title: "iNotebook – MERN Stack Notes App",
+      title: "Axis Flare Enterprise",
       description:
         "Developed a visa support and travel analysis platform providing travel insights, visa guidance, and journey reports for international routes.",
       image: "/project-images/axif-flare.png",
-      technologies: ["React", "Node.js", "Express", "MongoDB", "JWT"],
+      technologies: ["Next.js", "Tailwind CSS", "Redux", "RTK Query", "Node.js", "Express.js", "MongoDB", "JWT", "Stripe", "Firebase"],
       liveUrl: "https://axisflare.tech",
       githubUrl: "https://github.com/Alok4D/axis-flare-frontend",
     },
-
-    {
-      title: "NewsMonkey – React Real-Time News App",
-      description:
-        "A responsive news platform fetching live articles from an API and categorizing them into sections like Business, Sports, and Technology.",
-      image: "/project-images/Screenshot 2026-05-21 213300.png",
-      technologies: ["React", "TypeScript", "Firebase", "Framer Motion", "Chakra UI"],
-      liveUrl: "https://clash-gambling.vercel.app",
-      githubUrl: "https://github.com/Alok4D/clash-gambling",
-    },
-     {
-    title: "3D Shopping Platform (NEXUS)",
+         {
+    title: "StayVista (Hotel Booking Platform)",
     description:
-      "An immersive 3D e-commerce site built with React, Three.js, and Framer Motion. Features real-time product visualization and a modern neon UI.",
-    image: "/project-images/Screenshot 2026-05-21 213757.png",
-    technologies: ["React", "Three.js", "Framer Motion", "Tailwind CSS"],
+      "StayVista – A professional hotel and room booking platform that provides users with secure online reservations and room listing features. Anyone can also add their building rooms and rent them out.",
+    image: "/project-images/image copy 2.png",
+    technologies: ["Next.js", "Tailwind CSS", "Redux", "RTK Query", "Node.js", "Express.js", "MongoDB", "JWT", "Stripe", "Firebase"],
     liveUrl: "https://stayvista-live-2025-ce330.web.app",
     githubUrl: "https://github.com/Alok4D/client",
   },
-  {
-    title: "Get Me a Chai – Next.js Crowdfunding Platform",
+
+    {
+    title: "My Jewish Tales",
     description:
-      "A creator-support web app inspired by 'Buy Me a Coffee', enabling secure payments and creator donations. Built with Next.js, MongoDB, and Tailwind CSS.",
+      "My Jewish Tales is a modern full-stack web application built for digital creators, authors, and storytelling platforms, showcase customized children’s books and receive secure payments or direct donations from supporters in a crowdfunding-style ecosystem.",
     image: "/project-images/Screenshot 2026-05-22 085640.png",
-    technologies: ["Next.js", "MongoDB", "Tailwind CSS"],
+    technologies: ["Next.js", "Tailwind CSS", "Redux", "RTK Query", "Node.js", "Express.js", "MongoDB", "JWT", "Stripe", "Firebase"],
     liveUrl: "https://www.myjewishtales.com",
     githubUrl: "https://github.com/Alok4D",
   },
 
+
+    {
+      title: "Clash Gambling",
+      description:
+        "Clash Gambling – A fully responsive online lottery and gambling platform that features live updates, lottery draw systems, casino games, and betting functionalities with secure payments and an interactive user interface.",
+      image: "/project-images/Screenshot 2026-05-21 213300.png",
+      technologies: ["Next.js", "TypeScript", "JWT", "Stripe", "Tailwind CSS", "shadcn/ui"],
+      liveUrl: "https://clash-gambling.vercel.app",
+      githubUrl: "https://github.com/Alok4D/clash-gambling",
+    },
 
   ]
 
