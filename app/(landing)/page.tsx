@@ -11,7 +11,7 @@ import { ContactSection } from "@/app/(landing)/_components/contact-section"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-[#000] text-white">
+    <div className="min-h-screen bg-black text-white">
       <MainHeader />
       <main>
         <HeroDemo />

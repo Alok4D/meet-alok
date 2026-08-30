@@ -7,79 +7,69 @@ import { ExternalLink, Github } from "lucide-react"
 
 export function ProjectsSection() {
   const projects = [
-      {
-  title: "Cian Collective",
-  description:
-    "A faith-based SaaS platform empowering worship communities through transformative music ministry, elevating creators to share Christ’s message globally through love, faith, and connection.",
-  image: "/project-images/image.png",
-  technologies: ["Next.js", "Node.js", "Express", "MongoDB", "Tailwind CSS", "bcrypt", "shadcn/ui", "lenis"],
-  liveUrl: "https://www.ciancollective.org",
-  githubUrl: "#",
-},
     {
       title: "EE Medical Supply",
-      description:
-        "Developed a comprehensive medicine-based eCommerce platform with secure ordering, product management, and user-friendly interface.",
-      image: "/project-images/Screenshot 2026-05-21 212543.png",
+      description: "Auth: JWT secured dashboards Users, Admins safe login access. Products Management: Add, edit, and remove products with featured and best-selling system. Order Tracking: Monitor active orders in real-time. Categories & Brands: Admin control. Coupon: percentage and fixed price system. Shipping management. Payment: Stripe and PayPal integration.",
+      image: "/project-images copy/image copy 5.png",
       technologies: ["Next.js", "Tailwind CSS", "Redux", "RTK Query", "Node.js", "Express.js", "MongoDB", "JWT", "Stripe", "PayPal", "Firebase"],
       liveUrl: "https://eemedicalsupply.com",
-      githubUrl: "https://github.com/Alok4D",
+      githubUrl: "https://github.com/Alok4D/online-medicine-shop-frontend",
+    },
+    {
+      title: "AI Meta Generator",
+      description: "AI-powered keyword and title generation with real-time trend analysis. Multi-layout asset management workspace (Grid, List, Split View). Smart keyword analyzer with TM detection. Advanced keyword selection and CSV/TXT export. Secure dashboard with roles and subscriptions.",
+      image: "/project-images copy/image copy 12.png",
+      technologies: ["Next.js", "Tailwind CSS", "TypeScript", "Redux (RTK Query)", "Node.js", "Express.js", "MongoDB", "JWT", "Stripe"],
+      liveUrl: "https://metagen-ai-bd.vercel.app",
+      githubUrl: "https://github.com/Alok4D/ai-meta-generator",
     },
     {
       title: "Axis Flare Enterprise",
-      description:
-        "Developed a visa support and travel analysis platform providing travel insights, visa guidance, and journey reports for international routes.",
-      image: "/project-images/axif-flare.png",
+      description: "Visa Management: Country-specific visas, processing times, and criteria. Activity Monitoring: Track sign-ups and travel plans. Subscription Management. Smart Journey Planner. Visa Analyzer with checklists. Route Comparison. Fully responsive design.",
+      image: "/project-images copy/image copy 6.png",
       technologies: ["Next.js", "Tailwind CSS", "Redux", "RTK Query", "Node.js", "Express.js", "MongoDB", "JWT", "Stripe", "Firebase"],
       liveUrl: "https://axisflare.tech",
       githubUrl: "https://github.com/Alok4D/axis-flare-frontend",
     },
-         {
-    title: "StayVista (Hotel Booking Platform)",
-    description:
-      "StayVista – A professional hotel and room booking platform that provides users with secure online reservations and room listing features. Anyone can also add their building rooms and rent them out.",
-    image: "/project-images/image copy 2.png",
-    technologies: ["Next.js", "Tailwind CSS", "Redux", "RTK Query", "Node.js", "Express.js", "MongoDB", "JWT", "Stripe", "Firebase"],
-    liveUrl: "https://stayvista-live-2025-ce330.web.app",
-    githubUrl: "https://github.com/Alok4D/client",
-  },
-
     {
-    title: "My Jewish Tales",
-    description:
-      "My Jewish Tales is a modern full-stack web application built for digital creators, authors, and storytelling platforms, showcase customized children’s books and receive secure payments or direct donations from supporters in a crowdfunding-style ecosystem.",
-    image: "/project-images/Screenshot 2026-05-22 085640.png",
-    technologies: ["Next.js", "Tailwind CSS", "Redux", "RTK Query", "Node.js", "Express.js", "MongoDB", "JWT", "Stripe", "Firebase"],
-    liveUrl: "https://www.myjewishtales.com",
-    githubUrl: "https://github.com/Alok4D",
-  },
-
-
-    {
-      title: "Clash Gambling",
-      description:
-        "Clash Gambling – A fully responsive online lottery and gambling platform that features live updates, lottery draw systems, casino games, and betting functionalities with secure payments and an interactive user interface.",
-      image: "/project-images/Screenshot 2026-05-21 213300.png",
-      technologies: ["Next.js", "TypeScript", "JWT", "Stripe", "Tailwind CSS", "shadcn/ui"],
-      liveUrl: "https://clash-gambling.vercel.app",
-      githubUrl: "https://github.com/Alok4D/clash-gambling",
+      title: "RepFix AI",
+      description: "Responsive landing page with blogs, testimonials, FAQs, and stats. AI-powered dashboard featuring reputation sentiment analysis, chat, wallet, and support tickets. Marketplace system with service management and Stripe. Secure Admin CRM with RBAC. Business analytics.",
+      image: "/project-images copy/image copy 2.png",
+      technologies: ["Next.js", "Tailwind CSS", "Redux", "RTK Query", "Node.js", "Express.js", "MongoDB", "JWT", "Stripe", "Firebase"],
+      liveUrl: "https://repfix.ai",
+      githubUrl: "https://github.com/Alok4D/repfix-frontend",
     },
-
+    {
+      title: "Smart ERP",
+      description: "Real-time Synchronization with Socket.io. Advanced Role-Based Access Control (RBAC). Interactive POS System with smart search. Automatic Inventory Engine completing sales. Live Analytics Dashboard. Robust Security with JWT and RTK Query.",
+      image: "/project-images copy/image copy 9.png",
+      technologies: ["React", "Node.js", "Express.js", "MongoDB", "Socket.io", "Redux Toolkit", "TanStack Query", "JWT", "Tailwind CSS", "Zod"],
+      liveUrl: "https://smart-erp-dashboard.vercel.app",
+      githubUrl: "https://github.com/Alok4D/erp-inventory-frontend",
+    },
+    {
+      title: "StayVista",
+      description: "Role-Based Authentication: Secure registration, login, and JWT. Product Management: Admin room management (CRUD) and location tracking. Order & Payment System: Stripe payment gateway integration.",
+      image: "/Screenshot 2025-09-25 172040.png",
+      technologies: ["React", "Node.js", "Express.js", "MongoDB", "JWT", "Tailwind CSS", "Stripe", "Firebase", "TanStack Query", "vercel"],
+      liveUrl: "https://stayvista-bd.vercel.app",
+      githubUrl: "https://github.com/Alok4D/stayVista-frontend",
+    },
   ]
 
   return (
     <section id="projects" className="relative py-20 px-8 md:px-16 lg:px-24 bg-black text-white overflow-hidden">
       {/* Squares Background */}
       <div className="absolute inset-0">
-        <Squares 
+        <Squares
           direction="diagonal"
           speed={0.3}
           squareSize={50}
-          borderColor="#333" 
+          borderColor="#333"
           hoverFillColor="#222"
         />
       </div>
-      
+
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto">
         <motion.h2
