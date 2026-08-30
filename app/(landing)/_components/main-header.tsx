@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { Home, User, Briefcase, Code, Mail, Sparkles, Cpu } from "lucide-react" // ✅ Added Cpu
+import { Home, User, Briefcase, Code, Mail, Sparkles, Cpu } from "lucide-react"
 import { useState, useEffect } from "react"
 
 export function MainHeader() {
